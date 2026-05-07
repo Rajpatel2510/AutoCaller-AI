@@ -1,0 +1,252 @@
+.agent-settings-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  border-radius: 28px;
+  padding: 32px;
+  overflow: hidden;
+}
+
+.agent-settings-grid {
+  /* display: grid; */
+  padding: 20px;
+  grid-template-columns: 360px 1fr;
+  gap: 28px;
+}
+
+.settings-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.panel-heading {
+  text-align: left;
+}
+
+.panel-label {
+  display: inline-flex;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 14px;
+}
+
+.panel-heading h2 {
+  margin: 0 0 12px;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.panel-heading p {
+  margin: 0;
+  color: var(--text);
+}
+
+.preview-box {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  background: #f8f6ff;
+  border: 1px solid rgba(170, 59, 255, 0.16);
+  border-radius: 22px;
+  padding: 18px;
+}
+
+.agent-avatar {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #aa3bff 0%, #6c5ce7 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.preview-title {
+  margin: 0 0 4px;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.preview-subtitle {
+  margin: 0;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.theme-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.section-title {
+  margin: 0;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.theme-swatches {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.swatch {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 14px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.swatch.active {
+  border-color: var(--accent);
+}
+
+.swatch:nth-child(1) { background: #aa3bff }
+.swatch:nth-child(2) { background: #20c997 }
+.swatch:nth-child(3) { background: #4dabf7 }
+.swatch:nth-child(4) { background: #ff7733 }
+.swatch:nth-child(5) { background: #adb5bd }
+
+.phone-field-group .phone-input-row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 12px;
+}
+
+.phone-field-group select,
+.phone-field-group input {
+  min-height: 48px;
+}
+
+.phone-field-group select {
+  max-width: 150px;
+}
+
+@media (max-width: 640px) {
+  .phone-field-group .phone-input-row {
+    grid-template-columns: 1fr;
+  }
+
+  .phone-field-group select {
+    max-width: 100%;
+  }
+}
+
+.form-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  min-height: 46px;
+  border-radius: 18px;
+  border: 1px solid #b6b0c2;
+  background: #fff;
+  color: #120f1a;
+  padding: 14px 16px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #8b8498;
+  opacity: 1;
+}
+
+.form-group select {
+  appearance: none;
+}
+
+.form-group textarea {
+  min-height: 126px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(170, 59, 255, 0.12);
+}
+
+.two-column-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.range-value {
+  margin-top: 6px;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.primary-button,
+.secondary-button {
+  min-width: 128px;
+  border: none;
+  border-radius: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 14px 20px;
+}
+
+.primary-button {
+  background: var(--accent);
+  color: #fff;
+}
+
+.secondary-button {
+  background: #f7f5ff;
+  color: var(--text-h);
+}
+
+@media (max-width: 1024px) {
+  .agent-settings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    justify-content: stretch;
+    flex-direction: column;
+  }
+}

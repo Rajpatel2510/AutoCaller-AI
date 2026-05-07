@@ -1,0 +1,63 @@
+.app-shell {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: 44px 28px 56px;
+  min-height: calc(100svh - 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(185, 181, 213, 0.35);
+  border-radius: 36px;
+  box-shadow: var(--shadow);
+}
+
+.app-header {
+  text-align: left;
+  margin-bottom: 34px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  margin-bottom: 14px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 2.3vw, 3rem);
+  line-height: 1.05;
+}
+
+.intro {
+  margin: 16px 0 0;
+  max-width: 720px;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.app-main {
+  display: grid;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .app-shell {
+    padding: 20px 16px 28px;
+    border-radius: 28px;
+  }
+
+  .app-header {
+    text-align: center;
+  }
+
+  .intro {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

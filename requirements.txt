@@ -1,0 +1,18 @@
+# Core LiveKit stack
+livekit-agents[deepgram,openai,silero,turn-detector]
+livekit-api
+fastapi
+uvicorn[standard]
+
+python-dotenv
+pydantic-settings
+
+python-multipart
+
+
+
+
+livekit-plugins-openai
+livekit-plugins-deepgram
+livekit-plugins-cartesia
+livekit-plugins-silero
